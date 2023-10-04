@@ -1,0 +1,888 @@
+/* Adelphi Common Custom Styles for Springshare products V. 1.0.2 */
+/* Setting up AU color variables & fonts path */
+:root {
+	--gold: #ffb500;
+	--brown: #4f2c1d;
+	--brown_medium: #552F1B;
+	--brown_light: #7a6754; 
+	--brown_65: #A08f81;
+	--brown_45: #D7D0CB;
+	--brown_35: #c5bbb1;
+	--brown_dark: #524940;
+	--gray_light: #f1efed;
+	--gray_text: #4F4942;
+
+	--black: #000;
+	--black_alt: #0B0605;
+	--white: #fff;
+
+	--accent: var(--brown);
+	--error: #dc1000;
+
+	--gray_05: #f2f2f2;
+	--gray_05_alt: #FAFAFA;
+	--gray_10: #EAEAEA;
+	--gray_10_alt: #E5E5E5;
+	--gray_20: #CCCCCC;
+	--gray_30: #B2B2B2;
+	--gray_40: #999999;
+	--gray_50: #808080;
+	--gray_60: #666666;
+	--gray_70: #4D4D4D;
+	--gray_80: #333333;
+	--gray_90: #222222;
+
+	--fonts_path: 'https://libapps.s3.amazonaws.com/sites/1430/include/' /* PROD path - http://www.adelphi.edu/wp-content/themes/primary/dist/fonts / */
+}
+/* Declaring and adding Adelphi's fonts from the latest theme dist */
+@font-face {
+	font-family: 'Graphik';
+	font-weight: 300;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Light.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Light.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/Graphik-Light.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Light.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Light.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Graphik';
+	font-weight: 400;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Regular.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Regular.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/Graphik-Regular.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Regular.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Regular.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Graphik';
+	font-weight: 500;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Medium.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Medium.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/Graphik-Medium.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Medium.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Medium.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Graphik';
+	font-weight: 600;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Semibold.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Semibold.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/Graphik-Semibold.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Semibold.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Semibold.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Graphik';
+	font-weight: 700;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Bold.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Bold.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/Graphik-Bold.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Bold.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/Graphik-Bold.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Tiempos';
+	font-weight: normal;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Regular.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Regular.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/TiemposText-Regular.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Regular.woff") format("woff"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Regular.ttf") format("truetype")
+}
+
+@font-face {
+	font-family: 'Tiempos';
+	font-weight: bold;
+	font-display: swap;
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Semibold.eot");
+	src: url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Semibold.eot?#iefix") format("embedded-opentype"),
+	url("https://class.adelphi.edu/assets/fonts/TiemposText-Semibold.woff2") format("woff2"),
+	url("https://libapps.s3.amazonaws.com/sites/1430/include/TiemposText-Semibold.woff") format("woff")
+}
+
+/* Start of main AU style declarations */
+html {
+	background: var(--white);
+	overflow-x: hidden
+}
+
+body {
+	font-size: 14px;
+	font-family: Graphik, Ariel, sans-serif;
+	font-weight: 400;
+	min-width: 300px;
+	position: static !important
+}
+
+::-moz-selection {
+	background: #ddd;
+	text-shadow: none;
+}
+
+::selection {
+	background: #ddd;
+	text-shadow: none;
+}
+
+iframe {
+	border: none
+}
+
+menu {
+	margin: 0;
+	padding: 0
+}
+
+audio,canvas,iframe,img,svg,video {
+	vertical-align: middle
+}
+
+figure {
+	margin: 0
+}
+
+hr {
+	height: 1px;
+	background: #ddd;
+	border: none;
+	margin: 0
+}
+
+a {
+	color: var(--black);
+	background-color: transparent;
+}
+
+a:hover, a:focus {
+	color: var(--brown_light);
+}
+
+a:focus {
+	outline: 0;
+}
+
+strong {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 700
+}
+
+/* Black Common Header */
+.header-custom {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	color: #000;
+	z-index: 1030
+}
+
+.header_ribbon {
+	display: block;
+	position: relative;
+	height: 65px;
+	background: #000;
+	color: #fff;
+	z-index: 1
+}
+
+@media print {
+	.header_ribbon {
+		display: none
+	}
+}
+
+.header_ribbon_row {
+	min-width: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@media (max-width:767px) {
+	.footer_primary_row,
+	.header_ribbon_row {
+        width: calc(100% - 30px);
+    }
+}
+
+@media (min-width:768px) {
+	.footer_primary_row,
+	.header_ribbon_row {
+        width: calc(100% - 3.75rem);
+		padding-left: 15px;
+		padding-right: 15px;
+    }
+}
+
+.footer_primary_cell,
+.header_ribbon_cell {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+
+.header_ribbon_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	height: 65px;
+}
+
+@media (min-width: 980px) {
+	.header_ribbon_inner {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	}
+}
+
+.header_ribbon_inner #smallHome {
+	display: block;
+}
+
+.header_ribbon_inner #bigHome {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.header_ribbon_inner #smallHome {
+		display: none;
+	}
+
+	.header_ribbon_inner #bigHome {
+		display: list-item;
+	}
+}
+
+.header_au_logo_link {
+	height: 50px;
+}
+
+.header_au_logo_link .header_au_logo_link_label {
+    color: #383738;
+	width: 1px;
+    height: 1px;
+    position: absolute;
+    border: 0;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.header_au_logo {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.header_au_logo {
+		display: block;
+		width: 160px;
+		height: 100%;
+		background-image: url('https://www.adelphi.edu/libraries/wp-content/uploads/sites/92/2022/04/Adelphi_Wordmark_white.png');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
+
+.header_au_mark {
+	display: block;
+	width: 75px;
+	height: 100%;
+	background-image: url('https://www.adelphi.edu/libraries/wp-content/uploads/sites/92/2022/05/AU-Mark-White-RGB.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+@media (min-width: 768px) {
+	.header_au_mark {
+		display: none;
+	}
+}
+
+.utility_nav_header {
+	display: block; /* change to hide if needed - original none */
+	width: 100%;
+}
+
+@media (min-width: 980px) {
+	.utility_nav_header {
+		display: block;
+	}
+}
+
+.utility_nav_list {
+	font-weight: 700;
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+	.utility_nav_list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+	}
+}
+
+.utility_nav_item {
+	padding-bottom: 10px;
+	text-align: right;
+}
+
+.utility_nav_item:last-child {
+	padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+	.utility_nav_item {
+		text-align: unset;
+		position: relative;
+		padding: 0;
+		margin-right: 28px;
+	}
+
+	.utility_nav_item:after {
+		width: 3px;
+		height: 3px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: -16px;
+		background: #666;
+		border-radius: 50%;
+		content: "";
+		-webkit-transform: translateY(-1px);
+		transform: translateY(-1px)
+	}
+
+	.utility_nav_item:last-child {
+		margin-right: 0;
+	}
+
+	.utility_nav_item:last-child:after {
+		display: none
+	}
+}
+
+.utility_nav_link {
+	font-weight: normal;
+	font-family: Graphik, Ariel, sans-serif;
+	font-weight: 700;
+	display: block;
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+	position: relative;
+	color: inherit;
+	font-size: 14px;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-decoration: none;
+	text-transform: uppercase;
+	-webkit-transition: color .25s;
+	transition: color .25s
+}
+
+@media (min-width: 980px) {
+	.utility_nav_link {
+		margin-top: 1px;
+		padding: 13px 0 14px
+	}
+}
+
+.utility_nav_link:hover {
+	color: #ffb500;
+	text-decoration: none;
+}
+
+.utility_nav_link:hover .utility_nav_link_label:after {
+	bottom: -3px
+}
+
+.utility_nav_link:focus {
+	outline-color: #fff;
+	outline-width: 3px;
+	outline-offset: 10px;
+	outline-style: solid;
+	text-decoration: none;
+}
+
+.utility_nav_link:focus .utility_nav_link_label:after {
+	bottom: -3px
+}
+
+.utility_nav_link_label {
+	position: relative
+}
+
+.utility_nav_link_label:after {
+	width: 100%;
+	height: 1px;
+	display: block;
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	background: #ffb500;
+	content: "";
+	-webkit-transition: background-color 0.125s ease, bottom 0.125s ease;
+	transition: background-color 0.125s ease, bottom 0.125s ease
+}
+
+.utility_nav_link_icon {
+	display: none
+}
+
+/* Black Common Footer and Embedded Chat */
+.footer_custom {
+	color: #fff;
+}
+
+/* .footer_custom:before {
+    content: "";
+	width: 100%;
+    height: 100%;
+	position: absolute;
+    background: #000 url(https://www.adelphi.edu/wp-content/themes/primary/dist/images/footer_background.jpg) no-repeat;
+    background-size: auto 425px;
+    background-position: center top;
+    left: 0;
+} */
+
+.footer_primary {
+	margin-left: -15px !important;
+    margin-right: -15px !important;
+	background: black;
+}
+
+.footer_primary_row {
+	margin: auto;
+}
+
+.footer_primary_inner {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: end;
+	-ms-flex-pack: end;
+	justify-content: flex-end;
+	width: 100%;
+	background: #000 url(https://www.adelphi.edu/wp-content/themes/primary/dist/images/footer_background.jpg) no-repeat;
+    background-size: auto 600px;
+    background-position: center;
+}
+
+.footer_main,
+.footer_utility {
+	width: 100%;
+}
+
+.footer_utility {
+	padding-top: 40px;
+}
+
+.footer_utility .ccLicense {
+	text-align: center;
+}
+
+.footer_utility .ccLicense a {
+	color: var(--gold);
+	font-style: bold;
+}
+
+.footer_main {
+	margin-top: 90px;
+}
+
+.utility_nav_footer .utility_nav_list {
+	font-weight: 700;
+	font-size: 15px;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 768px) {
+	.utility_nav_footer .utility_nav_list {
+		flex-direction: row;
+	}
+}
+
+.utility_nav_footer {
+	display: block; /* change to hide if needed - original none */
+	width: 100%;
+	border-bottom: 1px solid #272727;
+    padding: 20px 0;
+}
+
+.meta_info {
+	font-size: 18px;
+	font-weight: 700;
+	font-family: "Tiempos", 'Times New Roman', Times, serif;
+	font-weight: normal;
+	color: #c5bbb1;
+	font-size: 16px;
+	line-height: 1.2;
+	margin-bottom: 36px
+}
+
+@media (min-width: 740px) {
+	.meta_info {
+		font-size: 20px
+	}
+}
+
+@media (min-width: 980px) {
+	.meta_info {
+		font-size: 24px
+	}
+}
+
+@media (min-width: 980px) {
+	.meta_info {
+		border-bottom-width: 0;
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 30.5%;
+		flex: 0 0 30.5%;
+		padding-bottom: 0
+	}
+}
+
+@media (min-width: 1220px) {
+	.meta_info {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 40.5%;
+		flex: 0 0 40.5%
+	}
+}
+
+.meta_info_details {
+	margin-top: 18px
+}
+
+.meta_info_detail {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	justify-content: center;
+}
+
+@media (min-width: 740px) {
+	.meta_info_detail {
+		justify-content: unset;
+	}
+}
+
+.meta_info_detail_label {
+	text-align: center
+}
+
+@media (min-width: 740px) {
+	.meta_info_detail_label {
+		text-align: left
+	}
+}
+
+@media print {
+	.meta_info_detail_label:after {
+		content: normal;
+		display: none
+	}
+}
+
+.meta_info_detail_label_hint {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	border: 0;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0
+}
+
+.meta_info_detail_label_hint.focusable:active,.meta_info_detail_label_hint.focusable:focus {
+	width: auto;
+	height: auto;
+	position: static;
+	clip: auto;
+	margin: 0;
+	overflow: visible
+}
+
+.meta_info_detail_link {
+	display: inline-block;
+	color: inherit;
+	line-height: 1.625;
+	text-decoration: none;
+	-webkit-transition: color .25s;
+	transition: color .25s
+}
+
+.meta_info_detail_link:hover,.meta_info_detail_link:focus {
+	text-decoration: underline
+}
+
+.meta_info_address_group {
+	display: block
+}
+
+.logo_footer {
+	display: flex;
+	justify-content: center;
+	text-align: center
+}
+
+@media (min-width: 740px) {
+	.logo_footer {
+		text-align: left;
+		justify-content: unset;
+	}
+}
+
+.logo_footer .logo_link_label {
+	font-weight: normal;
+	font-family: Graphik, Ariel, sans-serif;
+	font-weight: 700;
+	display: block;
+	color: #fff;
+	font-size: 24px;
+	text-align: center
+}
+
+@media (min-width: 740px) {
+	.logo_footer .logo_link_label {
+		font-size: 30px;
+		text-align: left
+	}
+}
+
+@media (min-width: 980px) {
+	.logo_footer .logo_link_label {
+		font-size: 35px
+	}
+}
+
+.logo_footer .logo_link_icon {
+	display: none
+}
+
+.social_nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 50px
+}
+
+@media (min-width: 740px) {
+	.social_nav {
+		-webkit-box-pack: start;
+		-ms-flex-pack: start;
+		justify-content: flex-start
+	}
+}
+
+@media (min-width: 980px) {
+	.social_nav {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 30.5%;
+		flex: 0 0 30.5%;
+		margin: 0;
+		text-align: right
+	}
+}
+
+@media (min-width: 1220px) {
+	.social_nav {
+		-webkit-box-flex: 0;
+		-ms-flex: 0 0 23.5%;
+		flex: 0 0 23.5%
+	}
+}
+
+@media print {
+	.social_nav {
+		display: none
+	}
+}
+
+.social_nav_title {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	border: 0;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0
+}
+
+.social_nav_title.focusable:active,.social_nav_title.focusable:focus {
+	width: auto;
+	height: auto;
+	position: static;
+	clip: auto;
+	margin: 0;
+	overflow: visible
+}
+
+.social_nav_list {
+	display: -webkit-inline-box;
+	display: -ms-inline-flexbox;
+	display: inline-flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	margin: 0;
+	padding: 0
+}
+
+.social_nav_item {
+	display: inline-block;
+	margin-right: 12px
+}
+
+@media only screen and (min-width: 357px) {
+	.social_nav_item {
+		margin-right: 17px
+	}
+}
+
+.social_nav_item:last-child {
+	margin-right: 0
+}
+
+.social_nav_link {
+	color: inherit;
+	display: block;
+	-webkit-transition: opacity 0.25s ease;
+	transition: opacity 0.25s ease
+}
+
+.social_nav_link:focus,.social_nav_link:hover {
+	opacity: 0.8
+}
+
+.social_nav_link:focus {
+	outline-width: 2px;
+	outline-color: #fff;
+	outline-style: solid;
+	outline-offset: 4px
+}
+
+.social_nav_label {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	border: 0;
+	clip: rect(0 0 0 0);
+	margin: -1px;
+	overflow: hidden;
+	padding: 0
+}
+
+.social_nav_label.focusable:active,.social_nav_label.focusable:focus {
+	width: auto;
+	height: auto;
+	position: static;
+	clip: auto;
+	margin: 0;
+	overflow: visible
+}
+
+#fixedchatbutton-old {
+    position: fixed;
+    bottom: 0px;
+    right: 1em;
+    z-index: 1000000000000 !important;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, .4);
+}
+
+#s-lch-widget-25162.s-lch-widget-float.open {
+    width: 420px;
+    max-height: 720px;
+    top: unset;
+}
+
+button.s-lch-widget-float-btn {
+    border: 0;
+    font-size: 18px;
+    z-index: 9990;
+    width: 100px;
+    height: 60px;
+    border-radius: 60px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+    float: right;
+    padding: 15px !important;
+    cursor: pointer;
+}
+
+/* Styling for appointment booking buttons */
+.meet-librarian-button {
+	display: block;
+	margin: auto;
+	height: 58px;
+	width: 201px;
+	background: url('https://libguides.adelphi.edu/ld.php?content_id=67852724') -10px -10px;
+}
+
+.meet-librarian-button:hover {
+	height: 58px;
+	width: 201px;
+	background: url('https://libguides.adelphi.edu/ld.php?content_id=67852724') -10px -88px;
+}
+
+.meet-librarian-button:active {
+	height: 58px;
+	width: 201px;
+	background: url('https://libguides.adelphi.edu/ld.php?content_id=67852724') -10px -166px;
+}
