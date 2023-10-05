@@ -83,7 +83,12 @@ p>a,
 	font-family: "Tiempos", 'Times New Roman', Times, serif;
 	font-weight: bold
 }
-
+/* Content */
+@media (max-width:767px) {
+	#content {
+		margin: 0;
+	}
+}
 /* Search Forms and Search Results */
 #content > div.search {
 	margin-top: 15px;
