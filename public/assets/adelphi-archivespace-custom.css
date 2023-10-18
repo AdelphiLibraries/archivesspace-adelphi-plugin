@@ -218,7 +218,7 @@ div .pagination>.active>span:hover {
 }
 
 /* Selects */
-select.form-control {
+select.form-control, select#sort {
 	min-width: 130px;
 	height: 44px;
 	text-overflow: ellipsis;
@@ -241,12 +241,8 @@ select.form-control {
 	appearance: none;
 }
 
-div.col-sm-1 select.form-control {
+div.col-sm-1 select.form-control, select#sort {
 	min-width: unset;
-}
-
-#s-lg-guide-list-controls select.form-control {
-	padding: 14px 50px 14px 16px;
 }
 
 select.form-control option {
@@ -437,6 +433,17 @@ h6 b,
 h6 b {
 	font-weight: normal;
 	font-family: "Graphik-Bold"
+}
+
+/* Main Content Styles */
+@media (min-width: 768px) {
+	#main-content div.information.col-sm-7:first-of-type {
+		width: 80%;
+	}
+	
+	#main-content div.page_actions.col-sm-5.right:first-of-type {
+		width: 20%;
+	}
 }
 
 /* All A-Z Pages Styles */
