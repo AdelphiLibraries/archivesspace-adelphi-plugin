@@ -253,6 +253,8 @@ select.form-control option {
 	font-size: 16px;
 }
 
+option[value="digital_object"] { display: none; }
+
 /* H Styles */
 
 #s-lib-public-header h1,
@@ -602,7 +604,7 @@ button.ui-dialog-titlebar-close i {
     left: -4px;
 }
 
-/* Side-Nav and Other Navigation styles */
+/* Nav and Other Navigation styles */
 .navbar {
 	border: none;
 	border-radius: unset;
@@ -622,15 +624,20 @@ body .navbar-default .navbar-brand {
 	margin-top: 0;
 }
 
-.nav,
-#s-lg-guide-tabs .nav {
+.nav {
 	font-size: 16px;
 	line-height: 1.2;
 	list-style: none;
 	background-color: var(--gray_light);
-	/* margin: 0;
-	padding: 6px 0 */
 }
+
+.nav a[href="/accessions"] { display:none; }
+
+.nav a[href="/repositories"] { display:none; }
+
+.nav a[href="/objects?limit=digital_object"] { display:none; }
+
+.nav a[href="/classifications"] { display:none; }
 
 @media (min-width: 980px) {
 
