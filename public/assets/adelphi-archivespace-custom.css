@@ -439,11 +439,11 @@ h6 b {
 
 /* Main Content Styles */
 @media (min-width: 768px) {
-	#main-content div.information.col-sm-7:first-of-type {
+	#main-content div.information.col-sm-7 {
 		width: 80%;
 	}
 	
-	#main-content div.page_actions.col-sm-5.right:first-of-type {
+	#main-content div.page_actions.col-sm-5.right {
 		width: 20%;
 	}
 }
@@ -1709,7 +1709,7 @@ ol[style="list-style-type: lower-alpha;"] li:before {
 	}
 }
 
-/* LG Buttons */
+/* Buttons */
 .btn:not(.btn-help-popover)>i {
 	color: var(--brown_medium) !important;
 }
@@ -1752,7 +1752,7 @@ ol[style="list-style-type: lower-alpha;"] li:before {
     opacity: .45;
 }
 
-.btn,
+.btn:not(.more),
 .btn-info,
 .btn-primary,
 .pager li>a,
