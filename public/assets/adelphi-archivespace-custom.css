@@ -1914,6 +1914,14 @@ ol[style="list-style-type: lower-alpha;"] li:before {
 	}
 }
 
+.panel-footer .address ul {
+	padding: 0;	
+}
+
+.panel-footer .address li {
+	list-style: none;	
+}
+
 /* LG ADMIN View Styles */
 .s-lib-cmd-bar .navbar-header ul.navbar-brand,
 .s-lib-cmd-bar .nav,
