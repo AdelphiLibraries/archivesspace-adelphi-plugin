@@ -22,7 +22,7 @@
 {
 	font-family: "Tiempos", 'Times New Roman', Times, serif;
 	font-weight: normal;
-	color: var(--gray_text);
+	color: var(--black);
 	font-size: 16px;
 	line-height: 1.6875
 }
@@ -50,12 +50,20 @@ a,
 	transition: color .25s, background .25s, text-decoration .25s, -webkit-text-decoration .25s;
 }
 
+a,
+#s-lib-public-header a {
+	text-decoration: underline;
+	-webkit-text-decoration-color: var(--gold);
+	text-decoration-color: var(--gold);
+}
+
+#navigation .top-bar a:hover,
 a:hover,
 a:focus,
 a:focus,
 #s-lib-public-header a:hover,
 #s-lib-public-header a:focus {
-	color: var(--black);
+	color: var(--brown_light);
 }
 
 #s-lib-public-header p,
@@ -96,6 +104,10 @@ p>a,
 
 .search > h3 {
 	display: none;
+}
+
+.searchstatement {
+	background-color: transparent;
 }
 
 #s-lg-az-filters form,
@@ -205,13 +217,18 @@ p>a,
 	border-color: var(--brown_medium);
 }
 
+div .pagination a {
+	color: var(--brown_medium);
+	background-color: var(--gray_light);
+}
+
 div .pagination>.active>a,
 div .pagination>.active>a:focus,
 div .pagination>.active>a:hover,
 div .pagination>.active>span,
 div .pagination>.active>span:focus,
 div .pagination>.active>span:hover {
-	color: var(--brown_medium);
+	color: var(--black);
 	cursor: default;
 	background-color: var(--gold);
 	border-color: var(--gold);
@@ -299,7 +316,7 @@ h1 b {
 
 h2,
 h2,
-h1.smaller-title {
+#main-content .information h1 {
 	font-weight: normal;
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 300;
@@ -313,7 +330,7 @@ h1.smaller-title {
 
 	h2,
 	h2,
-	h1.smaller-title {
+	#main-content .information h1 {
 		font-size: 42px;
 		line-height: 1.2381
 	}
@@ -327,7 +344,8 @@ h2 b {
 	font-family: "Graphik-Light"
 }
 
-h3,
+#content .upper-record-details h2,
+#notes_row #sidebar h2,
 h3 {
 	font-weight: normal;
 	font-family: Graphik, Ariel, sans-serif;
@@ -340,7 +358,8 @@ h3 {
 
 @media (min-width: 740px) {
 
-	h3,
+	#content .upper-record-details h2,
+	#notes_row #sidebar h2,
 	h3 {
 		font-weight: normal;
 		font-family: Graphik, Ariel, sans-serif;
@@ -448,7 +467,10 @@ h6 b {
 	}
 }
 
-/* All A-Z Pages Styles */
+/* Collections Pages Styles */
+#facets dt {
+	font-size: 18px;
+}
 input.form-control {
 	height: 44px;
 }
@@ -648,22 +670,43 @@ body .navbar-default .navbar-brand {
 	}
 }
 
-#s-lg-er-nav ul.nav,
-#s-lg-hp-nav ul.nav,
-#s-lg-srch-nav ul.nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-wrap: nowrap;
+#content #tabs .nav {
+	background-color: #fff;
 }
 
-#s-lg-profile-nav ul.nav {
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	flex-wrap: nowrap;
+.tabbing.nav-pills>li>a {
+	color: var(--brown_medium);
+	background-color: var(--gray_light);
 }
 
+.tabbing.nav-pills>li>a.active {
+	background-color: var(--black);
+}
+
+/* .tabbing.nav-pills>li:first-child a,
+.tabbing.nav-pills>li:last-child a {
+	border-radius: 0;
+} */
+
+.record-type-badge.resource {
+	color: var(--brown_medium);
+}
+
+.record-type-badge.repository,
+.record-type-badge.subject {
+	color: var(--gold);
+}
+
+.record-type-badge.top_container,
+.record-type-badge.archival_object {
+	color: var(--brown);
+	border-color: var(--brown);
+}
+
+.record-type-badge.agent {
+	color: var(--brown_medium);
+	border-color: var(--brown_medium);
+}
 
 /* Padding for LI elements holding the nav nav-pills */
 #s-lg-er-nav>ul>li,
@@ -1752,7 +1795,7 @@ ol[style="list-style-type: lower-alpha;"] li:before {
     opacity: .45;
 }
 
-.btn:not(.more),
+.btn:not(.more, .less),
 .btn-info,
 .btn-primary,
 .pager li>a,
