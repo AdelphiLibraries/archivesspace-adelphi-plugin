@@ -287,57 +287,25 @@ option[value="digital_object"] {
 	display: none;
 }
 
-/* H Styles */
-
-h1,
-h2.adelphi-guide-page-title {
-	font-weight: normal;
-	font-family: Graphik, Ariel, sans-serif;
-	font-weight: 600;
-	color: var(--black);
-	font-size: 30px;
-	line-height: 1.33333;
-}
-
-h2#adelphi-guide-page-title {
-	margin-top: 10px;
-}
-
-@media (min-width: 740px) {
-
-	h1,
-	h2.adelphi-guide-page-title {
-		font-weight: normal;
-		font-family: Graphik, Ariel, sans-serif;
-		font-weight: 700;
-		font-size: 55px;
-		line-height: 1.23636
-	}
-}
-
+/* H1 Styles */
 h1 strong,
 h1 b {
 	font-weight: normal;
 	font-family: "Graphik-Semibold"
 }
 
-h2,
-h2,
+h1,
 #main-content .information h1,
 #s-lib-public-header h1 {
-	font-weight: normal;
 	font-family: Graphik, Ariel, sans-serif;
-	font-weight: 300;
+	font-weight: 600;
 	color: var(--black);
 	font-size: 23px;
 	line-height: 1.3913;
-	/* margin: 50px 0 10px */
 }
 
 @media (min-width: 740px) {
-
-	h2,
-	h2,
+	h1,
 	#main-content .information h1,
 	#s-lib-public-header h1 {
 		font-size: 42px;
@@ -345,32 +313,28 @@ h2,
 	}
 }
 
+/* H2 Styles */
 h2 strong,
-h2 strong,
-h2 b,
 h2 b {
 	font-weight: normal;
-	font-family: "Graphik"
+	font-family: "Graphik-Semibold"
 }
 
 #content .upper-record-details h2,
 #notes_row #sidebar h2,
-h3 {
-	font-weight: normal;
+h2 {
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 600;
 	color: var(--black);
 	font-size: 20px;
 	line-height: 1.45;
-	/* margin: 50px 0 10px */
 }
 
 @media (min-width: 740px) {
 
 	#content .upper-record-details h2,
 	#notes_row #sidebar h2,
-	h3 {
-		font-weight: normal;
+	h2 {
 		font-family: Graphik, Ariel, sans-serif;
 		font-weight: 700;
 		font-size: 30px;
@@ -378,6 +342,7 @@ h3 {
 	}
 }
 
+/* H3 Styles */
 h3 strong,
 h3 strong,
 h3 b,
@@ -386,22 +351,16 @@ h3 b {
 	font-family: "Graphik-Bold"
 }
 
-h4,
-h4 {
-	font-weight: normal;
+h3 {
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 600;
 	color: var(--brown, #4f2c1d);
 	font-size: 16px;
 	line-height: 1.625;
-	/* margin: 50px 0 10px */
 }
 
 @media (min-width: 740px) {
-
-	h4,
-	h4 {
-		font-weight: normal;
+	h3 {
 		font-family: Graphik, Ariel, sans-serif;
 		font-weight: 700;
 		font-size: 22px;
@@ -409,57 +368,45 @@ h4 {
 	}
 }
 
+/* H4 Styles */
 h4 strong,
-h4 strong,
-h4 b,
 h4 b {
 	font-weight: normal;
 	font-family: "Graphik-Bold"
 }
 
-h5,
-h5 {
-	font-weight: normal;
+h4 {
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 500;
 	color: var(--black);
 	font-size: 15px;
 	line-height: 1.66667;
-	/* margin: 50px 0 10px */
 }
 
 @media (min-width: 740px) {
-
-	h5,
-	h5 {
+	h4 {
 		font-size: 18px;
 		line-height: 1.55556
 	}
 }
 
+/* H5 and H6 Styles */
 h5 strong,
-h5 strong,
-h5 b,
 h5 b {
 	font-weight: normal;
 	font-family: "Graphik-Medium"
 }
 
-h6,
-h6 {
-	font-weight: normal;
+h5, h6 {
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 700;
 	color: var(--black);
 	font-size: 14px;
 	line-height: 1.14286;
 	text-transform: uppercase;
-	/* margin: 50px 0 10px */
 }
 
 h6 strong,
-h6 strong,
-h6 b,
 h6 b {
 	font-weight: normal;
 	font-family: "Graphik-Bold"
@@ -1713,7 +1660,6 @@ ol[start="100"] {
 }
 
 .s-lib-box-content div:not(.s-lg-icons)>ol:not(.nav, .dropdown-menu, .slick-dots, .tabbernav, .s-lg-sortable)>li:before {
-	font-weight: normal;
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 700;
 	position: absolute;
@@ -1836,7 +1782,6 @@ fieldset[disabled] .btn {
 .pager li>a,
 .pager li>span,
 #s-lg-tabs-container .nav-pills>#s-lg-admin-tab-add>a {
-	font-weight: normal;
 	font-family: Graphik, Ariel, sans-serif;
 	font-weight: 700;
 	display: inline-block;
